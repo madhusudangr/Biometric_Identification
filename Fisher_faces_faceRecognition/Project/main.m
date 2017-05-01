@@ -3,7 +3,7 @@ function [img,weights_probe,weights_gallery,rank ] = main( )
 %   Detailed explanation goes here
 
 %%%%Step 1 obtain face images, Step2:represent every image as Gamma(i)  (reshape and load the image)
-location = '/Users/madhusudangovindraju/Downloads/Sprin 2016/Biometric Identification/HW4/gallery_set';
+location = './gallery_set';
 Gamma = shapeitup(location);
 
 %%%now G will contain all M images in a 2500x1 shape and the entire matrix will be 2500*M 
@@ -89,7 +89,7 @@ for i=1:1:30
 end
 top30EigenVectors_of_AAtrs = (A) * top30EigenVectors;
 %load the probe
-location = '/Users/madhusudangovindraju/Downloads/Sprin 2016/Biometric Identification/HW4/probe_set';
+location = './probe_set';
 Probe = shapeitup(location);
 numberofProbeImgs = size(Probe,2);
 probeA = zeros(2500,numberofProbeImgs);
@@ -135,7 +135,7 @@ for num = 40:10:100
     assignin('base', s, topEigenVectors_of_AAtrs);
     save('demo');
     %load the probe
-    location = '/Users/madhusudangovindraju/Downloads/Sprin 2016/Biometric Identification/HW4/probe_set';
+    location = './probe_set';
     Probe = shapeitup(location);
     numberofProbeImgs = size(Probe,2);
     probeA = zeros(2500,numberofProbeImgs);
