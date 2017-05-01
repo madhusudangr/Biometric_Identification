@@ -1,0 +1,1 @@
+This project is to compare a Naive Bayes Clasifier and a K-means Classifier with the MNIST dataset
